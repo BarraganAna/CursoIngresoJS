@@ -9,5 +9,6 @@ function mostrar()
 	vEdad = document.getElementById("txtIdEdad"). value;
 	
 	alert( "Usted se llama " +vNombre+ " y tiene " +vEdad+ " años")
+	//variable = parseInt(variable);
 }
 
