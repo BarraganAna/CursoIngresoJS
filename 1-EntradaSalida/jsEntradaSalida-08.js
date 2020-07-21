@@ -7,11 +7,13 @@ function SacarResto()
 {
 	var vDividendo;
 	var vDivisor;
+	var vResultado
 	
 	vDividendo = parseInt(document.getElementById("txtIdNumeroDividendo").value);
 	vDivisor = parseInt(document.getElementById("txtIdNumeroDivisor").value);
+	vResultado= vDividendo % vDivisor
 
-	alert ("El resto es " + vDividendo % vDivisor);
+	alert ("El resto es " + vResultado);
 	/*var vNumDividendo;
 	var vNumDivisor;
 	var vResto;
