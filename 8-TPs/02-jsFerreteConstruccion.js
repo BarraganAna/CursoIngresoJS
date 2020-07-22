@@ -15,10 +15,23 @@ function Rectangulo ()
 
 }
 function Circulo () 
-{
-	
+{var vRadio
+ var vPerimetro
+ var vPi=3.14
+ vRadio = parseInt(document.getElementById("txtIdRadio").value);
+ vPerimetro= vPi * (vRadio * 2 );
+ alert("La cantidad de alambre a comprar es " + vPerimetro*3);
+
 }
 function Materiales () 
-{
+{var vLargo  
+  var vAncho
+  var vCemento
+  var vCal
+ vLargo= parseInt(document.getElementById("txtIdLargo").value);
+ vAncho= parseInt(document.getElementById("txtIdAncho").value);
+ vCemento=(vLargo * vAncho)*2;
+ vCal= (vLargo * vAncho)*3;
+ alert("Senecesitan "+ vCemento + " bolsas de cemento y "+ vCal + " de cal");
 	
 }
