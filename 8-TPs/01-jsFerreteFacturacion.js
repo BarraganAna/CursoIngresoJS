@@ -17,22 +17,22 @@ function Promedio ()
 {let vPrecio1
  let vPrecio2
  let vPrecio3
- let vPromedio
+ 
  vPrecio1=parseInt(document.getElementById("txtIdPrecioUno").value);
  vPrecio2=parseInt(document.getElementById("txtIdPrecioDos").value);
  vPrecio3=parseInt(document.getElementById("txtIdPrecioTres").value);
- vPromedio= (vPrecio3 + vPrecio2 + vPrecio1)/3;
- alert("El promedio es "+ vPromedio);  
+
+ alert("El promedio es "+ (vPrecio1+vPrecio2+vPrecio3)/3);  
 	
 }
 function PrecioFinal () 
 {let vPrecio1
  let vPrecio2
  let vPrecio3
- let vPreciofinal
+ 
  vPrecio1=parseInt(document.getElementById("txtIdPrecioUno").value);
  vPrecio2=parseInt(document.getElementById("txtIdPrecioDos").value);
  vPrecio3=parseInt(document.getElementById("txtIdPrecioTres").value);
- vPreciofinal= (vPrecio1 + vPrecio2 + vPrecio3)*1.21;
- alert("El precio final es " + vPreciofinal);
+
+ alert("El precio final es " + (vPrecio3+vPrecio2+vPrecio1)*1.21);
 }
