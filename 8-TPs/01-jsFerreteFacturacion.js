@@ -4,9 +4,9 @@ B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
-{var vPrecio1
- var vPrecio2
- var vPrecio3
+{let vPrecio1
+ let vPrecio2
+ let vPrecio3
  vPrecio1=parseInt(document.getElementById("txtIdPrecioUno").value);
  vPrecio2=parseInt(document.getElementById("txtIdPrecioDos").value);
  vPrecio3=parseInt(document.getElementById("txtIdPrecioTres").value);
@@ -14,10 +14,10 @@ function Sumar ()
 	
 }
 function Promedio () 
-{var vPrecio1;
- var vPrecio2;
- var vPrecio3;
- var vPromedio;
+{let vPrecio1
+ let vPrecio2
+ let vPrecio3
+ let vPromedio
  vPrecio1=parseInt(document.getElementById("txtIdPrecioUno").value);
  vPrecio2=parseInt(document.getElementById("txtIdPrecioDos").value);
  vPrecio3=parseInt(document.getElementById("txtIdPrecioTres").value);
@@ -26,10 +26,10 @@ function Promedio ()
 	
 }
 function PrecioFinal () 
-{var vPrecio1
-var vPrecio2
-var vPrecio3
-var vPreciofinal
+{let vPrecio1
+ let vPrecio2
+ let vPrecio3
+ let vPreciofinal
  vPrecio1=parseInt(document.getElementById("txtIdPrecioUno").value);
  vPrecio2=parseInt(document.getElementById("txtIdPrecioDos").value);
  vPrecio3=parseInt(document.getElementById("txtIdPrecioTres").value);
