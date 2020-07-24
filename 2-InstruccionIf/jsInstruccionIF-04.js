@@ -6,7 +6,6 @@ function mostrar()
 	
 	vEdad = parseInt(document.getElementById("txtIdEdad").value);
 	
-	//if((vEdad <=13)&& (vEdad >=17))
 	if(vEdad >=13&& vEdad <=17)
 	
         { 
