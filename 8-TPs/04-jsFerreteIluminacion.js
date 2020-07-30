@@ -8,38 +8,51 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{ let vLamp;
-  let vPrecio=35;
+function CalcularPrecio() {
+  let vCantidad;
+  let vPrecio = 35;
   let vMarca;
-  vLamp = parseInt(document.getElementById("txtIdCantidad").value);
-  vMarca= document.getElementById("Marca").value;
- 
+  let vDescuento;
+  let vImporteFinal;
+  let vIIBB;
 
-  
+  vCantidad = parseInt(document.getElementById("txtIdCantidad").value);
+  vMarca = document.getElementById("Marca").value;
 
-    if(vLamp >= 6)
-    {
-     alert(vLamp * vPrecio*0.5);
-    }
-     else if (vLamp==5 && vMarca =="ArgentinaLuz" )
-      {
-       alert(vLamp*vPrecio*0.6); 
-      }
-     else if(vLamp==5 && vMarca !="ArgentinaLuz")
-     {
-       alert(vLamp*vPrecio*0.7);  
-     }
-     else if(vLamp==4 && vMarca =="ArgentinaLuz" || vMarca== "FelipeLamparas"||(vLamp==3 && vMarca=="FelipeLamparas"))
-     {
-      alert(vLamp*vPrecio*0.90);
-     } 
-     else if (vLamp==3&&vMarca=="ArgentinaLuz")
-     {
-      alert(vLamp*vPrecio*0.85);
-     }
-     else
-     {
-        alert(vLamp*vPrecio*0.95);
-     }
+  if (vCantidad >= 6) {
+    vDescuento = 0.5 * vPrecio;
+  }
+  else if (vCantidad == 5 && vMarca == "ArgentinaLuz") {
+    vDescuento = vPrecio * 0.6;
+  }
+  else if (vCantidad == 5 && vMarca != "ArgentinaLuz") {
+    vDescuento = vPrecio * 0.7;
+  }
+  else if (vCantidad == 4 && vMarca == "ArgentinaLuz" || vMarca == "FelipeLamparas") {
+    vDescuento = vPrecio * 0.75;
+  }
+  else if (vCantidad == 4 && vMarca != "ArgentinaLuz") {
+    vDescuento = vPrecio * 0.8;
+  }
+  else if (vCantidad == 3 && vMarca == "ArgentinaLuz") {
+    vDescuento = vPrecio * 0.85;
+  }
+  else if (vCantidad == 3 && vMarca == "FelipeLamparas") {
+    vDescuento = vPrecio * 0.9;
+  }
+  else if (vCantidad == 3 && vMarca != "ArgentinaLuz" || vMarca != "FelipeLamparas") {
+    vDescuento = vPrecio * 0.95;
+  }
+  else {
+    vDescuento = vPrecio * 1;
+  }
+  document.getElementById("txtIdprecioDescuento").value = vDescuento;
+  vImporteFinal = vDescuento * vCantidad;
+  if (vImporteFinal > 120) {
+    vIIBB = vImporteFinal * 1.1;
+    alert("Usted pago  " + vIIBB.toFixed(2) + " de IIBB");
+  }
+  else {
+    alert(vImporteFinal);
+  }
 }
