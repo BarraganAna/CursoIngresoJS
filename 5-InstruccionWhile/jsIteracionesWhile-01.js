@@ -7,12 +7,12 @@ function mostrar() {
 	while (i < 10) {
 		i++;
 		//Num = Num + 1;
-		alert(i);
+		console.log(i);
 		
 		
 	}
 
-	alert("Fin de la repetición");
+	console.log("Fin de la repetición");
 
 
 
